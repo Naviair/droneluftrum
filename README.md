@@ -1,4 +1,4 @@
-# react-frontend
+# Droneluftrum
 
 This repository holds the code for the frontend part of the Naviair UTM project.  
 The first aim of the project is to implement a drone platform that, through integrations with other services, visualizes the law regarding drone operations in specific zones in Denmark.
