@@ -1,0 +1,119 @@
+@import '../../../Styles/Styles.scss';
+
+.info_box {
+	position: absolute;
+	bottom: 30px;
+	left: calc(117.5px + 10px); //sidenav width + spacing
+	right: 60px;
+	max-width: 600px;
+	background-color: #f9f9f9;
+	box-shadow: 0 0 12px 0 #999;
+	// overflow: hidden;
+
+	> .info_header {
+		display: flex;
+		color: #777;
+
+		> .icon {
+			width: 50px;
+			color: #333;
+			display: flex;
+			//align-items: center;
+
+			& > svg {
+				margin: 10px auto;
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		> .close {
+			color: #333;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			width: 17px;
+			height: 17px;
+
+			& > svg {
+				width: 17px;
+				height: 17px;
+			}
+
+			:hover {
+				cursor: pointer;
+			}
+		}
+
+		> .text {
+			padding: 10px;
+			width: 46.5%;
+		}
+
+		> .position {
+			padding: 10px;
+			font-size: 12px;
+
+			.label {
+				font-weight: bold;
+			}
+
+			.value {
+				font-weight: 400;
+				margin-right: 10px;
+			}
+		}
+	}
+	&_skeleton {
+		@extend .info_box;
+		max-height: 75.2px;
+	}
+	&_mobile {
+		@extend .info_box;
+		width: 100%;
+		left: 0;
+		bottom: calc(1px + #{$Nav_mobile_height});
+		right: 0;
+		max-width: none;
+
+		&_skeleton {
+			@extend .info_box;
+			width: 100%;
+			left: 0;
+			bottom: calc(1px + #{$Nav_mobile_height});
+			right: 0;
+			min-height: 130.4px;
+			max-width: none;
+		}
+	}
+
+	.content {
+		height: auto;
+		max-height: 300px;
+		overflow-y: auto;
+		position: relative;
+
+		svg {
+			width: 16px;
+			height: 16px;
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.infoCircle {
+			width: 20px;
+			height: 20px;
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	.tableInfoListIcon {
+		display: table;
+	}
+
+	.tableInfoListInfo {
+		cursor: pointer;
+		display: table;
+	}
+}

@@ -1,0 +1,108 @@
+.map_settings_panel {
+	.zoneIcon {
+		width: 15px;
+		display: inline-block;
+	}
+
+	.zoneIconCircle {
+		@extend .zoneIcon;
+		height: 15px;
+		border-radius: 100%;
+		margin-top: 3.4px;
+	}
+
+	.zoneIconLine {
+		@extend .zoneIcon;
+		margin-bottom: 2px;
+	}
+
+	& h2 {
+		font-size: 14px;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	.section {
+		margin-bottom: 15px;
+	}
+
+	.background {
+		.select {
+			width: 100%;
+			margin-bottom: 5px;
+
+			&.ant-select .ant-select-selector {
+				padding-left: 0;
+				padding: 6px;
+				height: auto;
+			}
+		}
+
+		.option {
+			@extend .map_settings_panel_background_option;
+		}
+
+		.image {
+			@extend .map_settings_panel_background_option_image;
+		}
+
+		.title {
+			@extend .map_settings_panel_background_option_title;
+		}
+	}
+
+	.details {
+		.switch {
+			float: right;
+			margin-right: 5px;
+		}
+	}
+
+	.document_date {
+		display: none;
+	}
+
+	div.layerSwitches {
+		display: flex;
+		flex-direction: column;
+
+		h4 {
+			padding-bottom: 10px;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		button.layerSwitch {
+			&.disabled {
+			}
+		}
+	}
+}
+
+div.custom-panel div.document_html ul {
+	padding: 0px 20px !important; //usually 40px
+}
+
+.map_settings_panel_background_option {
+	padding: 6px 12px 6px 12px;
+	margin: 3px 6px;
+
+	&.ant-select-item-option-selected {
+		background-color: #f5f5f5;
+	}
+}
+
+.map_settings_panel_background_option_image {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+}
+
+.map_settings_panel_background_option_title {
+	display: inline-block;
+	margin-left: 12px;
+}
+
+.title-opacity {
+	opacity: 0.9 !important;
+}

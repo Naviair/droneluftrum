@@ -1,0 +1,64 @@
+@import '../../../Styles/Styles.scss';
+
+.list_header {
+	width: 100%;
+	display: flex;
+	overflow: auto;
+
+	.section {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+
+	.left {
+		justify-content: flex-start;
+	}
+
+	.center {
+		justify-content: center;
+	}
+
+	.right {
+		margin-left: 20px;
+		min-width: 150px;
+		justify-content: flex-end;
+	}
+}
+
+.modalHeader {
+	display: flex;
+	width: 100%;
+	padding: 16px 24px;
+	font-size: 16px;
+	border-bottom: 1px solid #f0f0f0;
+	margin-bottom: 24px;
+	color: rgba(0, 0, 0, 0.85);
+
+	.right {
+		flex: 1;
+		justify-content: flex-end;
+		text-align: right;
+	}
+
+	.left {
+		flex: 1;
+		justify-content: flex-start;
+	}
+}
+
+.tableChildrenWrapper {
+	width: 100%;
+}
+
+.tableButton {
+	color: $BrandColor !important;
+}
+
+.tableEditFooterWrapper {
+	text-align: right !important;
+	.cancelButton {
+		margin-right: 8px !important;
+	}
+}

@@ -1,0 +1,15 @@
+.colorPickerButton {
+	cursor: pointer;
+}
+
+.colorPickerPopup {
+	position: absolute;
+	right: 0;
+	top: 36px;
+	z-index: 1;
+}
+
+.colorShow {
+	width: 20px;
+	height: 20px;
+}

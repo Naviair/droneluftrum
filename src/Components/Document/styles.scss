@@ -1,0 +1,26 @@
+@import '../../Styles/Styles.scss';
+
+.document_table {
+    >.title {
+        color: $BrandColor;
+        font-size: .9rem;
+        font-weight: 600;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        text-align: left;
+    }
+}
+
+.document_html {
+    margin: auto;
+}
+
+.document_collapse {
+    text-align: left;
+}
+
+.document_date {
+    text-align: right;
+    font-size: 10px;
+    margin-top: 20px;
+}

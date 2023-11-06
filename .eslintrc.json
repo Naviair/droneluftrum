@@ -1,0 +1,127 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"plugins": ["react", "@typescript-eslint"],
+	"extends": [
+		"eslint:recommended", //rules marked with a check mark: https://eslint.org/docs/rules/
+		"plugin:import/recommended", //https://github.com/benmosher/eslint-plugin-import
+		"plugin:import/typescript",
+		"plugin:react/recommended", //rules marked with a check mark: https://www.npmjs.com/package/eslint-plugin-react
+		//"plugin:react-hooks/recommended", //https://www.npmjs.com/package/eslint-plugin-react-hooks //REMOVED AND DISABLED. CAN BE REINSTATED IF CODEBASE SHOULD LIVE UP TO RULES.
+		"plugin:@typescript-eslint/recommended", //rules marked with a check mark: https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
+		"plugin:eslint-comments/recommended", //https://github.com/mysticatea/eslint-plugin-eslint-comments
+		"prettier" //MUST BE LAST. See @eslint-config-prettier
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true,
+			"tsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module",
+		"project": ["./tsconfig.json"]
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"rules": {
+		//rule numbers: 0 = "off", 1 = "warn", 2 = "error"
+		"linebreak-style": ["warn", "unix"],
+		"quotes": ["warn", "single"],
+		"semi": ["warn", "always"],
+		"no-console": "warn",
+		"eqeqeq": "warn",
+		"prefer-arrow-callback": ["warn", { "allowNamedFunctions": false, "allowUnboundThis": true }], //prefer arrow functions. default settings.
+		"no-throw-literal": "off", //remove eslint rule in favor of typescript-eslint version.
+		"no-return-await": "off", //remove eslint rule in favor of typescript-eslint version.
+		"import/no-default-export": "error",
+		"react/jsx-curly-brace-presence": [1, { "props": "always", "children": "always" }],
+		"react/jsx-pascal-case": [1, { "allowAllCaps": false, "allowNamespace": true }],
+		"react/prop-types": "off", //We do not use prop-types but write them on our own.
+		"react/display-name": "off",
+		"react/function-component-definition": [
+			//https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/function-component-definition.md#heads-up-typescript-users
+			2,
+			{
+				"namedComponents": "arrow-function", //autofix to arrow-function for named components
+				"unnamedComponents": "arrow-function" //autofix to arrow-function for unnamed components
+			}
+		],
+		"react/forbid-component-props": [
+			"error",
+			{
+				"forbid": [
+					{
+						"propName": "style", //warn for inline styling on React components
+						//"allowedFor": [SomeComponent, AnotherComponent],
+						"message": "Avoid using inline styling. Use stylesheet. [Component]"
+					}
+				]
+			}
+		],
+		"react/forbid-dom-props": [
+			"error",
+			{
+				"forbid": [
+					{
+						"propName": "style", //warn for inline styling on DOM elements
+						//"allowedFor": [SomeComponent, AnotherComponent],
+						"message": "Avoid using inline styling. Use stylesheet. [DOM]"
+					}
+				]
+			}
+		],
+		"@typescript-eslint/array-type": ["error", { "default": "array" }], //Must use [] over Array for type definitions
+		"@typescript-eslint/no-unnecessary-condition": ["warn"], //No need to check if type is deemed truthy/falsy
+		"@typescript-eslint/no-unnecessary-boolean-literal-compare": ["warn"], //No need to check if a boolean is equal to a boolean. Just check if "it is" or "is not" (val === false --> !val)
+		"@typescript-eslint/prefer-for-of": ["warn"], //for-of loops suggested for simple loops
+		"@typescript-eslint/prefer-includes": ["warn"], //use ES6 .includes rather than .indexOf
+		"@typescript-eslint/prefer-nullish-coalescing": ["warn"], //use ?? over ||. The former responds to null/undefined, the latter to any falsy value.
+		"@typescript-eslint/prefer-optional-chain": ["warn"], //use typescript dot-notation [a?.b?.c] over JavaScript logical chaining [a && b && c]
+		"@typescript-eslint/prefer-string-starts-ends-with": "warn", //use startsWith over "word".charAt(0)
+		"@typescript-eslint/no-throw-literal": ["error"], //only throw Error objects.
+		"@typescript-eslint/return-await": ["error", "in-try-catch"], //consistent rules for returning in async await.
+		"@typescript-eslint/naming-convention": [
+			"error",
+			{ "selector": "default", "format": ["camelCase"] }, //everything should be camelCase
+			{
+				"selector": "variable",
+				"types": ["function"], //functions can be either PascalCase (components) or camelCase (regular functions) but nothing else.
+				"format": ["PascalCase", "camelCase"] //https://github.com/typescript-eslint/typescript-eslint/issues/2607
+			},
+			{
+				"selector": "interface",
+				"format": ["PascalCase"],
+				"custom": {
+					"regex": "^I[A-Z]", //Interfaces must start with I
+					"match": true
+				}
+			},
+			{
+				"selector": "enum",
+				"format": ["PascalCase"],
+				"custom": {
+					"regex": "^E[A-Z]", //Enum must start with E
+					"match": true
+				}
+			},
+			{
+				"selector": "typeAlias",
+				"format": ["PascalCase"],
+				"custom": {
+					"regex": "^T[A-Z]", //Type must start with T
+					"match": true
+				}
+			},
+			{
+				"selector": "enumMember",
+				"format": ["UPPER_CASE"] //All enum members should be UPPERCASE
+			}
+		]
+	}
+}

@@ -1,0 +1,28 @@
+@import '../../../Styles/Styles.scss';
+
+.ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper {
+	box-shadow: 0 0 12px 0 #999 !important;
+}
+
+/*
+.map_side_panel {
+    //display: none;
+    position: fixed;
+    right: -310px;
+    width: 300px;
+    z-index: 1;
+    padding-top: 80px;
+    //transition: 400ms;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    &.mobile {
+        bottom: $Nav_mobile_height;
+    }
+
+    &.visible {
+        //display: block;
+        right: 0;
+        transition: 400ms !important;
+    }
+}*/

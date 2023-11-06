@@ -1,0 +1,87 @@
+@import '../../../Styles/Styles.scss';
+
+$overlay-background: #000000;
+
+$cookie-border-radius: 5px;
+
+.disclaimer_overlay {
+	position: absolute;
+	//display: block;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	background-color: rgba($color: $overlay-background, $alpha: 0.5);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	//display: none;
+	align-items: center;
+	justify-content: center;
+
+	> .disclaimer_container {
+		max-width: 600px;
+		background-color: #fff;
+		box-shadow: 0 0 12px 0 #999;
+		border-radius: $cookie-border-radius;
+
+		> .disclaimer_header {
+			padding: 40px;
+			background-color: #d7d7d7;
+			width: 100%;
+			border-top-left-radius: $cookie-border-radius;
+			border-top-right-radius: $cookie-border-radius;
+
+			> .disclaimer_header_title {
+				font-size: 1.8em;
+				font-weight: 500;
+				//margin-bottom: 10px;
+			}
+
+			> .disclaimer_header_description {
+				line-height: 1.1rem;
+				font-size: 1rem;
+				a {
+					text-decoration: underline;
+				}
+			}
+
+			> .disclaimer_header_date {
+				font-size: 14px;
+				color: #999999;
+				margin-top: 20px;
+			}
+		}
+
+		> .disclaimer_content {
+			width: 100%;
+			padding: 20px;
+		}
+
+		> .disclaimer_footer {
+			width: 100%;
+			background-color: #d7d7d7;
+			text-align: center;
+		}
+	}
+	/*
+    > .overlay_footer {
+      position: absolute;
+      bottom: 40px;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+*/
+}
+
+.ant-modal-title .modal_header {
+	position: relative;
+	display: flex;
+
+	> div,
+	.language-dropdown {
+		display: inherit;
+		position: absolute !important;
+		right: -5px;
+		padding: 0;
+	}
+}

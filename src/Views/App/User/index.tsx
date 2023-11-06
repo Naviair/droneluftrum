@@ -1,0 +1,6 @@
+export * from './ChangeEmailView'
+export * from './LoginView'
+export * from './ProfileView'
+export * from './RegisterView'
+export * from './ResetPassView'
+export * from './UserDropdown'

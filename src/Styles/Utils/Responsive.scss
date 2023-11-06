@@ -1,0 +1,30 @@
+
+[class*='showInlineFor'],
+[class*='showBlockFor'],
+[class*='showInlineBlockFor'],
+[class*='showFlexFor'] {
+    display: none !important; /* 1 */
+  }
+  
+  @each $size in $breakpointKeys {
+    .hideFor#{to-upper-case($size)} {
+      @include breakpoint($size) { display: none !important; }
+    }
+  
+    .showInlineFor#{to-upper-case($size)} {
+      @include  breakpoint($size) { display: inline !important; }
+    }
+  
+    .showBlockFor#{to-upper-case($size)} {
+      @include  breakpoint($size) { display: block !important; }
+    }
+  
+    .showInlineBlockFor#{to-upper-case($size)} {
+      @include  breakpoint($size) { display: inline-block !important; }
+    }
+  
+    .showFlexFor#{to-upper-case($size)} {
+      @include  breakpoint($size) { display: flex !important; }
+    }
+  }
+  

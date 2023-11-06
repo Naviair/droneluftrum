@@ -1,0 +1,35 @@
+@import '../../../Styles/Styles.scss';
+.layout {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+}
+
+.body {
+    height: 100%;
+    //Only on mobile
+    width: 100%;
+    display: flex;
+}
+
+.body-mobile {
+    @extend .body;
+    height: 100vh;
+    max-height: calc(100% - #{$Nav_mobile_height} - #{$Header_height});
+}
+
+.content {
+    width: 100%;
+    overflow: auto;
+    //Dynamic size for mobile or web
+    height: 100%;
+    max-height: calc(100vh - (#{$Header_height}));
+    background-color: #f8f8f8;
+}
+
+.content-mobile {
+    @extend .content;
+    height: 100%;
+    max-height: calc(100vh - #{$Nav_mobile_height} - #{$Header_height});
+}

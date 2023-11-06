@@ -1,0 +1,59 @@
+@import '../../Styles/Styles.scss';
+
+$Nav_mobile_backgroundColor: #fff !default;
+$Nav_mobile_shadowColor: #999 !default;
+$Nav_mobile_shadowBlur: 12px;
+
+/*
+Nav component
+*/
+.nav_mobile {
+	box-shadow: 0 0 $Nav_mobile_shadowBlur 0 $Nav_mobile_shadowColor;
+	background-color: $Nav_mobile_backgroundColor;
+	height: $Nav_mobile_height;
+	width: 100%;
+	z-index: 1;
+
+	@extend .nomark;
+
+	.list {
+		list-style: none;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.item {
+		padding: 8.5px;
+		position: relative;
+		display: inline-block;
+
+		.icon {
+			display: block;
+			color: #444;
+
+			& > svg {
+				display: initial; //use Fontawesome display setting rather than inherit property from parent
+				width: 20px;
+				height: 20px;
+			}
+		}
+
+		.title {
+			font-size: small;
+		}
+
+		&.-active {
+			.title {
+				color: $BrandColor;
+			}
+
+			.icon {
+				color: $BrandColor;
+			}
+		}
+	}
+}

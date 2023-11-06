@@ -1,0 +1,36 @@
+// Language drop down
+
+.dropdown-menu {
+	padding: 15px !important;
+	width: '200px';
+
+	& .ant-divider-horizontal {
+		margin: 12px !important;
+		min-width: auto;
+		width: auto;
+	}
+
+	& .title-menu-item {
+		font-weight: 600;
+		font-family: 'Ubuntu Mono', 'IBM Plex Mono', 'Roboto Mono', 'Cutive Mono', monospace;
+	}
+}
+
+.header-div {
+	text-align: center;
+}
+
+.header-div > a {
+	color: #96ae09;
+	font-size: 12px;
+}
+
+.opacity-text {
+	opacity: 0.5;
+	font-size: 12px;
+	text-align: center;
+}
+
+.opacity-text > a {
+	color: #96ae09;
+}

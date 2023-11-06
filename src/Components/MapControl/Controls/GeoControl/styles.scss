@@ -1,0 +1,21 @@
+@import '../../../../Styles/Styles.scss';
+
+//Not in use yet, should be implementet, should be added to the icon/svg
+.mapboxgl-ctrl-geo {
+  @extend .nomark;
+
+  i {
+    &.failed {
+      position: absolute;
+      font-size: 11px;
+      text-align: center;
+      font-weight: 400;
+      top: 5px;
+      right: 6px;
+      z-index: 9999;
+      color: white;
+      background-color: rgb(211, 94, 96);
+      border-radius: 50%;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.weatherRowContainer {
+	display: flex;
+	//padding: 10px 0 10px 5%;
+	width: max-content;
+	margin-top: 10px;
+
+	.row {
+		display: flex;
+		font-size: 11px;
+	}
+
+	.col {
+		flex: 1;
+		font-size: 11px;
+	}
+
+	.right {
+		text-align: end;
+		padding-right: 10px;
+	}
+
+	.value {
+		flex: 1.5;
+	}
+
+	.weatherColContainer {
+		width: 90px;
+		flex: 1;
+	}
+
+	.weatherHeader {
+		height: 60px;
+	}
+
+	.noDataText {
+		font-size: 11px;
+		opacity: 0.5;
+	}
+
+	.noDataDiv {
+		text-align: center;
+	}
+
+	.weatherImage {
+		text-align: center;
+		svg {
+			width: 38px;
+			height: 38px;
+		}
+	}
+
+	.headerText {
+		font-size: 12px;
+		opacity: 0.7;
+		text-align: center;
+	}
+
+	.contentText {
+		font-size: 11px;
+	}
+
+	.mRight {
+		margin-right: 10%;
+	}
+}
+
+.cardWrapper {
+	margin-top: 10px;
+}

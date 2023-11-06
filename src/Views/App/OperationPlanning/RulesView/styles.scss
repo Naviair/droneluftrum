@@ -1,0 +1,29 @@
+.rulesContainer {
+	max-height: 200px;
+	overflow: scroll;
+}
+
+.cardWrapper {
+	margin-top: 10px;
+}
+
+.ruleIconError {
+	& > svg {
+		color: #ff7875 !important;
+		font-size: 22px !important;
+	}
+}
+
+.ruleIconWarning {
+	& > svg {
+		color: #ffd666 !important;
+		font-size: 22px !important;
+	}
+}
+
+.ruleIconInformation {
+	& > svg {
+		color: #69c0ff !important;
+		font-size: 22px !important;
+	}
+}

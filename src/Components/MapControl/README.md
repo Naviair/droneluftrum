@@ -1,0 +1,2 @@
+# MapControl
+Contains everything render-related to the map component. Map component initialization and helper files are placed inside ```./mapControl```. The map component itself is rendered in ```MapControl.tsx```.

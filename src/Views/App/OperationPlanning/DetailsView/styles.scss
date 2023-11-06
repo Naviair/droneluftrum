@@ -1,0 +1,61 @@
+@import '../../../../Styles/Styles.scss';
+
+.detailsViewRow {
+	display: flex;
+
+	.columnTitle {
+		margin-top: 10px;
+		flex: 8;
+	}
+
+	.noEdit {
+		margin-bottom: 10px;
+	}
+
+	.edit {
+		padding-bottom: -10px;
+	}
+
+	.columnValue {
+		margin-top: 15px;
+		flex: 14;
+	}
+
+	.columnValueEdit {
+		flex: 20;
+		padding-bottom: -20px !important;
+		padding-right: 25%;
+	}
+
+	.title {
+		//font-size: 12px;
+		font-weight: bold;
+		text-align: left;
+	}
+
+	.value {
+		//font-size: 12px;
+		text-align: left;
+	}
+}
+
+.detailsCardEdit {
+	color: $BrandColor;
+	cursor: pointer;
+}
+
+.footerCenterSection {
+	text-align: center;
+
+	.cancelBtn {
+		margin-right: 5px;
+	}
+}
+
+.periodWidth {
+	width: 100% !important;
+}
+
+.notesHeight {
+	height: 100px !important;
+}

@@ -1,0 +1,48 @@
+@import '../../../../Styles/Styles.scss';
+
+.tableFilter {
+	display: flex;
+}
+
+.tableFilterCollapse {
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+.tableFilterCollapseContent {
+	box-shadow: 0 0 12px 0 #999;
+}
+
+.tableFilterBadge {
+	margin-left: 20px;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	white-space: nowrap;
+
+	.badge {
+		margin: auto;
+		margin-left: 5px !important;
+		background-color: #fff;
+		border-color: $BrandColor;
+		border-width: 1px;
+		color: $BrandColor;
+	}
+
+	&.-active {
+		font-weight: bold;
+		.badge {
+			color: #fff;
+		}
+	}
+
+	&.-left {
+		justify-content: left;
+		margin-left: 0px;
+	}
+}
+
+.tableFilterBadgeDiv {
+	display: flex !important;
+	align-items: center !important;
+}

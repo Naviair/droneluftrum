@@ -1,0 +1,134 @@
+// Dropdown-styles
+
+.dropdown-menu {
+	padding: 20px !important;
+	width: 200px !important;
+
+	svg {
+		width: 24px !important;
+	}
+}
+
+.title-menu-item {
+	margin-left: 5px !important;
+	white-space: 'nowrap';
+}
+
+.modal-130-button {
+	width: 130px;
+}
+
+.modal-content {
+	padding: 10px;
+}
+
+.modal-content > h4 {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.modal-link {
+	color: #96ae09;
+}
+
+.modal-link:hover {
+	color: #96ae09;
+}
+
+.modal-160-button {
+	width: 160px;
+}
+
+// Drawer-profile
+
+.drawer-wrapper {
+	z-index: 99 !important;
+}
+
+.drawer-wrapper-mobile {
+	top: 0px !important;
+	position: static !important;
+}
+
+.drawer-skeleton-div {
+	margin-top: 50px;
+	text-align: center;
+}
+
+.drawer-input-title {
+	font-size: 14px;
+	padding-left: 35px;
+}
+
+.drawer-form {
+	padding-top: 35px !important;
+}
+
+.drawer-right-section {
+	text-align: right;
+}
+
+.drawer-form-item {
+	padding-right: 35 !important;
+}
+
+.footer {
+	padding-bottom: 80px !important;
+}
+
+.drawer-right-section > a,
+.drawer-right-section > a:hover {
+	color: #96ae09;
+}
+
+.drawer-right-section > .ant-btn {
+	width: 130px;
+}
+
+.drawer-right-section > .cancel-btn {
+	margin-right: 5px;
+}
+
+.drawer-title {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+// User-dropdown
+
+.header-div {
+	text-align: center;
+}
+
+.header-div > a {
+	color: #96ae09;
+	font-size: 12px;
+}
+
+.opacity-text {
+	opacity: 0.5;
+	font-size: 12px;
+	text-align: center;
+}
+
+.opacity-text > a {
+	color: #96ae09;
+}
+
+.ant-modal-title .modalHeader {
+	position: relative;
+	display: flex;
+
+	> div,
+	.language-dropdown {
+		display: inherit;
+		position: absolute !important;
+		right: -5px;
+		padding: 0;
+	}
+}
+
+.register {
+	margin-bottom: 0px !important;
+	border-bottom: 0px solid #f0f0f0 !important;
+}

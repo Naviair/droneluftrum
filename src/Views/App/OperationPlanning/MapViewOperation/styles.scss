@@ -1,0 +1,18 @@
+@import '../../../../Styles/Styles.scss';
+
+.mapViewOperationCard {
+	height: 100%;
+	width: 100%;
+
+	.cardEditButton {
+		color: $BrandColor;
+	}
+
+	.ant-card-body {
+		height: 95%;
+	}
+
+	.operationMap {
+		height: 100%;
+	}
+}

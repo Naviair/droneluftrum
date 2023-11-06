@@ -1,0 +1,73 @@
+@import '../../Styles/Styles.scss';
+
+$Nav_web_backgroundColor: #fff !default;
+$Nav_web_shadowColor: #999 !default;
+$Nav_web_shadowBlur: 12px;
+
+/*
+Nav component
+*/
+.nav_web {
+	box-shadow: 0 0 $Nav_web_shadowBlur 0 $Nav_web_shadowColor;
+	background-color: $Nav_web_backgroundColor;
+	z-index: 1;
+
+	@extend .nomark;
+
+	.list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+
+	.item {
+		margin: 6px;
+		padding: 15px;
+		border-bottom: 1px solid #f3f3f3;
+		position: relative;
+		.icon {
+			display: block;
+			color: #444;
+
+			& > svg {
+				display: initial; //use Fontawesome display setting rather than inherit property from parent
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		&:hover {
+			.title {
+				color: $BrandColor;
+			}
+
+			.icon {
+				color: $BrandColor;
+			}
+		}
+
+		&.-active {
+			.title {
+				color: $BrandColor;
+			}
+
+			.icon {
+				color: $BrandColor;
+			}
+
+			::after {
+				content: ' ';
+				background: $BrandColor;
+				border-radius: 10px;
+				position: absolute;
+				width: 6px;
+				height: 70px;
+				top: 50%;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+				left: -6px;
+			}
+		}
+	}
+}

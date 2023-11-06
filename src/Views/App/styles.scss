@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:regular,bold,italic');
+
+body {
+	height: 100vh !important;
+	width: 100vw;
+}
+
+#root {
+	height: 100%;
+	width: 100%;
+	font-family: Nunito, 'sans serif' !important;
+}
+
+.ant-modal-wrap {
+	z-index: 11;
+}
+
+.ant-modal-mask {
+	z-index: 11 !important;
+}
